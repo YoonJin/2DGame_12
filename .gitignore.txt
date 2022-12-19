@@ -4,8 +4,8 @@
  
 # =============== #
  
-Temp/
+/[Tt]emp/
  
-Obj/
+/[Oo]bj/
  
-Library/
+/[Ll]brary/
