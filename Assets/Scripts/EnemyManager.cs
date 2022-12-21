@@ -66,6 +66,11 @@ public class EnemyManager : ManagerSingleton2<EnemyManager>
                 this.StartCoroutine(CreateEnemy());
                 this._pPool.InsertQueue(this.pMobQueue.Dequeue());
             }
+            else
+            {
+                DamageOn damageTxt = obj.GetComponent<DamageOn>();
+                damageTxt.DamageTxt();
+            }
 
             return mob.HP;
         }
@@ -83,6 +88,8 @@ public class EnemyManager : ManagerSingleton2<EnemyManager>
             itemFx.transform.SetParent(goldParent);
             itemFx.Explosion(screenPos, toTweenPos.position, 150f);
         }
+
+        GameManager.Instance.SetMoney(Random.Range(50, 100));
     }
     
 }

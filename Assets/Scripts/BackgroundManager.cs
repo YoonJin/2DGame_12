@@ -7,7 +7,6 @@ public class BackgroundManager : ManagerSingleton2<BackgroundManager>
     public Background[] backgrounds;
 
     private float _speed = 5;
-    private bool _isScroll = true;
 
     private float[] _leftPosX = new float[2];
     private float[] _rightPosX = new float[2];
@@ -28,7 +27,7 @@ public class BackgroundManager : ManagerSingleton2<BackgroundManager>
     // Update is called once per frame
     void Update()
     {
-        if(this._isScroll)
+        if(GameManager.Instance.isScroll)
         {
             for(int i = 0; i < backgrounds.Length; i++)
             {
@@ -46,11 +45,5 @@ public class BackgroundManager : ManagerSingleton2<BackgroundManager>
                 }
             }
         }
-    }
-
-    public void SetScroll(bool isScroll)
-    {
-        this._isScroll = isScroll;
-        this._speed = (isScroll) ? 5 : 0;
     }
 }

@@ -63,8 +63,10 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\BackgroundManager.cs" />
+    <Compile Include="Assets\Scripts\UI\DamageText\DamageOn.cs" />
     <Compile Include="Assets\Scripts\ManagerSingleton2.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
+    <Compile Include="Assets\Scripts\UI\DamageText\DamagePopup.cs" />
     <Compile Include="Assets\Scripts\UI\Gold\ItemFx.cs" />
   </ItemGroup>
   <ItemGroup>
