@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5953218562463412599}
   - component: {fileID: 926842027562159398}
   - component: {fileID: -6244124990948301554}
+  - component: {fileID: 2739554362589258567}
   m_Layer: 0
   m_Name: Mob
   m_TagString: Monster
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   monSpeed: 5
-  StartPositon: {fileID: 0}
+  att: 5
 --- !u!114 &-6244124990948301554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,3 +132,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabDamage: {fileID: 5264488429737680209, guid: 0e11b7af42da52a48b0babf8cf8c8f90, type: 3}
+--- !u!95 &2739554362589258567
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5953218562463412598}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5da035b330d3ab649b870aacf928fd73, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

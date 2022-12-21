@@ -1,11 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
     public int att = 20;
     Animator animator;
+
+    public float curHp = 100;
+    public float maxHp = 100;
+
+    public Image hp_bar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +45,21 @@ public class PlayerControl : MonoBehaviour
             }
         }
     }
+
+    public float Damage(int att)
+    {
+        this.curHp -= att;
+        // 0 ~ 1까지의 값으로 이미지 크기를 조정 (비율)
+        this.hp_bar.fillAmount = curHp / maxHp;
+
+        if(curHp <= 0)
+        {
+            // TODO : 추후 처리
+        }
+
+        return curHp;
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
